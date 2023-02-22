@@ -24,22 +24,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-white"> Top 50 Books </h1>
+                <h1 class="text-white"> Recommend Books</h1>
+                <form action="/recommend_books" method="post" >
+                    <input name="user_input" type="text" class="form-control"><br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+                </form>
             </div>
 
-            {% for i in range(book_name|length) %}
-                <div class="col-md-3" style="margin-top:50px">
+            <div class="col-md-3" style="margin-top:50px">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ image[i] }}">
-                        <p class="text-white">{{ book_name[i] }}</p>
-                        <h5 class="text-white">{{ author[i] }}</h5>
-                        <h5 class="text-white">Votes - {{ Votes[i] }}</h5>
-                        <h5 class="text-white">Rating - {{ Rating[i] }}</h5>
+                        <img src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg">
+                        <p class="text-white">yu</p>
+                        <h5 class="text-white">gjk</h5>
+
                     </div>
                 </div>
             </div>
-            {% endfor %}
 
 
 
