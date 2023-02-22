@@ -31,16 +31,22 @@
                 </form>
             </div>
 
-            <div class="col-md-3" style="margin-top:50px">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg">
-                        <p class="text-white">yu</p>
-                        <h5 class="text-white">gjk</h5>
+            {% if data %}
+             {% for i in data %}
+                <div class="col-md-3" style="margin-top:50px">
+                   <div class="card">
+                      <div class="card-body">
+                        <img src="{{i[2]}}">
+                        <p class="text-white">{{i[0]}}</p>
+                        <h5 class="text-white">{{i[1]}}</h5>
 
-                    </div>
-                </div>
-            </div>
+                     </div>
+                 </div>
+               </div>
+             {% endfor %}
+
+            {% endif %}
+
 
 
 
